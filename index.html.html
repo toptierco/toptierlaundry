@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Tier Laundry Co. — Kisumu</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('P9jz-esJr8b3i2nHL');</script>
+<style>
+  :root {
+    --blue-deep: #0a2a4a;
+    --blue-mid: #1565c0;
+    --blue-bright: #1e88e5;
+    --blue-light: #bbdefb;
+    --blue-pale: #e3f2fd;
+    --gold: #c8a96e;
+    --gold-light: #e8d5a3;
+    --white: #ffffff;
+    --off-white: #f8fbff;
+    --text-dark: #0a1929;
+    --text-mid: #1a3a5c;
+    --text-muted: #5c7a9a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 3rem;
+    background: rgba(10, 42, 74, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(200,169,110,0.2);
+  }
+  .nav-logo { font-family: 'Great Vibes', cursive; font-size: 2rem; color: var(--white); letter-spacing: 1px; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); color: var(--blue-deep); padding: 0.5rem 1.4rem; border-radius: 2px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0a2a4a 0%, #0d47a1 50%, #1565c0 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 8rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(30,136,229,0.3) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(200,169,110,0.15) 0%, transparent 50%);
+  }
+  .hero-bubbles {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  }
+  .bubble {
+    position: absolute; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+    animation: float 8s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%,100%{transform:translateY(0) scale(1);}
+    50%{transform:translateY(-20px) scale(1.02);}
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-tagline-top {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1rem; color: var(--gold-light);
+    letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+  .hero-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(4rem, 12vw, 8rem);
+    color: var(--white); line-height: 1;
+    text-shadow: 0 4px 40px rgba(30,136,229,0.4);
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s;
+  }
+  .hero-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--gold);
+    margin-top: 0.5rem; margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s;
+  }
+  .hero-divider {
+    width: 80px; height: 1px; background: var(--gold);
+    margin: 0 auto 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.7s;
+  }
+  .hero-slogan {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 1.3rem; color: rgba(255,255,255,0.85);
+    letter-spacing: 0.05em; margin-bottom: 2.5rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+  .hero-badges {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 3rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 1s;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.9); padding: 0.5rem 1.2rem; border-radius: 2px;
+    font-size: 0.8rem; letter-spacing: 0.05em;
+  }
+  .hero-badge span { color: var(--gold); font-weight: 600; }
+  .hero-btns {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 1.1s;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--blue-deep);
+    padding: 1rem 2.5rem; border: none; border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 1rem 2.5rem; border: 1px solid rgba(255,255,255,0.4); border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTION COMMONS */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--blue-bright); margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600;
+    color: var(--blue-deep); line-height: 1.2; margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 1rem; color: var(--text-muted); line-height: 1.7; max-width: 560px;
+  }
+
+  /* SERVICES */
+  .services { background: var(--white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px; margin-top: 3rem;
+    border: 1.5px solid var(--blue-light);
+  }
+  .service-card {
+    padding: 2.5rem; background: var(--white);
+    border: 1.5px solid var(--blue-light);
+    transition: all 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--gold);
+    transition: height 0.3s ease;
+  }
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { background: var(--blue-pale); transform: translateY(-2px); }
+  .service-icon {
+    width: 48px; height: 48px; background: var(--blue-pale);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem; font-size: 1.3rem;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; color: var(--blue-deep); margin-bottom: 0.5rem;
+  }
+  .service-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+  .service-price {
+    font-size: 1.5rem; font-weight: 600; color: var(--blue-mid);
+  }
+  .service-price span { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+  /* PRICING */
+  .pricing { background: var(--blue-deep); }
+  .pricing .section-title { color: var(--white); }
+  .pricing .section-label { color: var(--gold); }
+  .pricing .section-sub { color: rgba(255,255,255,0.6); }
+  .pricing-table {
+    margin-top: 3rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;
+    overflow: hidden;
+  }
+  .pricing-row {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    align-items: center; transition: background 0.2s;
+  }
+  .pricing-row:hover { background: rgba(255,255,255,0.04); }
+  .pricing-row.header {
+    background: rgba(200,169,110,0.15);
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600;
+  }
+  .pricing-row:last-child { border-bottom: none; }
+  .pricing-service { color: var(--white); font-size: 0.95rem; }
+  .pricing-detail { color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 2px; }
+  .pricing-val { color: rgba(255,255,255,0.7); font-size: 0.9rem; text-align: center; }
+  .pricing-cost { color: var(--gold); font-weight: 600; font-size: 1rem; text-align: right; }
+  .pricing-note {
+    margin-top: 1.5rem; padding: 1rem 1.5rem;
+    background: rgba(30,136,229,0.1); border: 1px solid rgba(30,136,229,0.2); border-radius: 4px;
+    color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.6;
+  }
+  .pricing-note strong { color: var(--gold); }
+
+  /* BOOKING */
+  .booking { background: var(--off-white); }
+  .booking-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .booking-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; color: var(--blue-deep); margin-bottom: 1rem;
+  }
+  .booking-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+  .booking-perks { list-style: none; }
+  .booking-perks li {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.9rem; color: var(--text-mid); padding: 0.5rem 0;
+    border-bottom: 1px solid var(--blue-pale);
+  }
+  .booking-perks li::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .booking-form {
+    background: var(--white); border: 1px solid var(--blue-light);
+    border-radius: 4px; padding: 2.5rem;
+  }
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600; color: var(--blue-deep); margin-bottom: 1.5rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1.1rem; }
+  .form-group label {
+    display: block; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.4rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 0.75rem 1rem;
+    border: 1px solid var(--blue-light); border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--text-dark);
+    background: var(--off-white); outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue-bright); background: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+  .form-group select { cursor: pointer; }
+
+  /* PAYMENT */
+  .payment-section { margin-top: 1.5rem; }
+  .payment-title {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;
+  }
+  .payment-methods { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .pay-method {
+    flex: 1; min-width: 120px; padding: 0.9rem; border: 2px solid var(--blue-light);
+    border-radius: 4px; text-align: center; cursor: pointer; transition: all 0.2s;
+    background: var(--white);
+  }
+  .pay-method:hover { border-color: var(--blue-bright); }
+  .pay-method.active { border-color: var(--blue-mid); background: var(--blue-pale); }
+  .pay-method-name { font-size: 0.85rem; font-weight: 600; color: var(--blue-deep); margin-top: 0.25rem; }
+  .pay-method-sub { font-size: 0.7rem; color: var(--text-muted); }
+  .mpesa-input { margin-top: 1rem; }
+  .card-inputs { margin-top: 1rem; display: grid; gap: 0.75rem; }
+  .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .submit-btn {
+    width: 100%; padding: 1rem; background: var(--blue-mid);
+    color: var(--white); border: none; border-radius: 2px;
+    font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    margin-top: 1.5rem; transition: all 0.2s;
+  }
+  .submit-btn:hover { background: var(--blue-deep); }
+  .form-success {
+    display: none; text-align: center; padding: 2rem;
+    background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px;
+  }
+  .form-success h3 { color: #2e7d32; font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .form-success p { color: #388e3c; font-size: 0.9rem; }
+
+  /* REVIEWS */
+  .reviews { background: var(--white); }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem; margin-bottom: 3rem;
+  }
+  .review-card {
+    background: var(--off-white); border: 1px solid var(--blue-light);
+    border-radius: 4px; padding: 1.75rem; position: relative;
+  }
+  .review-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 0.75rem; }
+  .review-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
+  .review-author { font-size: 0.8rem; font-weight: 600; color: var(--blue-deep); letter-spacing: 0.05em; }
+  .review-date { font-size: 0.75rem; color: var(--text-muted); }
+  .review-form-wrap {
+    background: var(--blue-pale); border: 1px solid var(--blue-light);
+    border-radius: 4px; padding: 2rem; margin-top: 2rem;
+  }
+  .review-form-wrap h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: var(--blue-deep); margin-bottom: 1.5rem;
+  }
+  .stars-select { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  .star-btn {
+    width: 36px; height: 36px; background: none; border: 1px solid var(--blue-light);
+    border-radius: 2px; font-size: 1.2rem; cursor: pointer; transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .star-btn.active { background: var(--gold); border-color: var(--gold); }
+  .review-submit {
+    background: var(--blue-mid); color: var(--white);
+    border: none; border-radius: 2px; padding: 0.8rem 2rem;
+    font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s; margin-top: 0.5rem;
+  }
+  .review-submit:hover { background: var(--blue-deep); }
+
+  /* CONTACT */
+  .contact { background: var(--blue-deep); }
+  .contact .section-title { color: var(--white); }
+  .contact .section-label { color: var(--gold); }
+  .contact-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .contact-item { }
+  .contact-label {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .contact-value { font-size: 1rem; color: var(--white); line-height: 1.6; }
+  .contact-value a { color: var(--blue-light); text-decoration: none; }
+  .contact-value a:hover { color: var(--gold); }
+
+  /* FOOTER */
+  footer {
+    background: #050f1a; padding: 2rem;
+    text-align: center; border-top: 1px solid rgba(200,169,110,0.15);
+  }
+  footer .footer-logo { font-family: 'Great Vibes', cursive; font-size: 2rem; color: var(--white); }
+  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 0.5rem; }
+
+  /* RESPONSIVE */
+  @media(max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    .booking-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .pricing-row { grid-template-columns: 1fr 1fr; }
+    .pricing-row .pricing-detail,
+    .pricing-row .pricing-val { display: none; }
+    .pricing-row.header .pricing-val { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Top Tier</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#book">Book</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bubbles">
+    <div class="bubble" style="width:400px;height:400px;top:-100px;right:-100px;animation-delay:0s;"></div>
+    <div class="bubble" style="width:250px;height:250px;bottom:100px;left:-80px;animation-delay:2s;"></div>
+    <div class="bubble" style="width:150px;height:150px;top:40%;right:15%;animation-delay:4s;"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tagline-top">Kisumu's Premier Laundry Service</div>
+    <div class="hero-title">Top Tier</div>
+    <div class="hero-subtitle">Laundry Co.</div>
+    <div class="hero-divider"></div>
+    <div class="hero-slogan">Transforming Fabrics, Clinging to Godliness</div>
+    <div class="hero-badges">
+      <div class="hero-badge">From <span>Ksh 80/kg</span></div>
+      <div class="hero-badge">Free pickup <span>over 15kg</span></div>
+      <div class="hero-badge">Open <span>8am – 5pm</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#book" class="btn-primary">Book a Pickup</a>
+      <a href="#pricing" class="btn-outline">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STATEMENT + PILLARS -->
+<section style="background:var(--blue-deep);padding:4rem 2rem;">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 3.5rem;">
+      <div class="section-label" style="color:var(--gold);">Our promise</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3vw,1.9rem);font-style:italic;color:var(--white);line-height:1.6;font-weight:300;">
+        "Top Tier is the laundry &amp; fabric care service that delivers genuinely clean results — on clothes, carpets, and bedding — so you never have to worry about the job being done right."
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+      <div style="text-align:center;padding:1.75rem 1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:4px;">
+        <div style="font-size:1.6rem;margin-bottom:0.75rem;">✦</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);margin-bottom:0.5rem;">Premium results</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">Every item cleaned to a higher standard than competitors promise</div>
+      </div>
+      <div style="text-align:center;padding:1.75rem 1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:4px;">
+        <div style="font-size:1.6rem;margin-bottom:0.75rem;">◎</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);margin-bottom:0.5rem;">Reliability</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">On time, consistent, and exactly what was agreed — every single time</div>
+      </div>
+      <div style="text-align:center;padding:1.75rem 1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:4px;">
+        <div style="font-size:1.6rem;margin-bottom:0.75rem;">◈</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);margin-bottom:0.5rem;">Ease</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">Pickup and delivery included — zero hassle from start to finish</div>
+      </div>
+      <div style="text-align:center;padding:1.75rem 1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:4px;">
+        <div style="font-size:1.6rem;margin-bottom:0.75rem;">◐</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);margin-bottom:0.5rem;">Trust</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">Transparent pricing, careful handling, and a team that respects your items</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What we do</div>
+    <h2 class="section-title">Every fabric, treated with care</h2>
+    <p class="section-sub">From everyday laundry to deep carpet cleans and suit care — we handle it all with precision and deliver back to your door.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">👔</div>
+        <div class="service-name">Clothes & Garments</div>
+        <div class="service-desc">Wash &amp; fold from Ksh 80/kg. For a full wash, iron &amp; fold finish — Ksh 100/kg. Priced by weight.</div>
+        <div class="service-price">Ksh 80–100 <span>/ kg</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛋️</div>
+        <div class="service-name">Carpet Cleaning</div>
+        <div class="service-desc">Deep extraction cleaning for all carpet types and sizes. We remove stains, odours and dust mites.</div>
+        <div class="service-price">Ksh 200 <span>/ sq. metre</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛏️</div>
+        <div class="service-name">Duvets & Bedding</div>
+        <div class="service-desc">Duvets cleaned by size — from 3×6 to 6×6 and above. Bed sheets, pillowcases and mattress covers also handled.</div>
+        <div class="service-price">Ksh 350–550 <span>/ duvet</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧥</div>
+        <div class="service-name">Suit Cleaning</div>
+        <div class="service-desc">Full dry-clean, sanitise and professional press for men's and ladies' suits. Returned on a hanger, ready to wear.</div>
+        <div class="service-price">Ksh 600–700 <span>/ suit</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪟</div>
+        <div class="service-name">Curtains & Drapes</div>
+        <div class="service-desc">Delicate handling for curtains of all fabrics and lengths. Re-hung ready to use.</div>
+        <div class="service-price">Ksh 150 <span>/ panel</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">Transparent pricing</div>
+    <h2 class="section-title">No hidden charges. Ever.</h2>
+    <p class="section-sub">Clear, fair rates for every service. Free pickup and delivery on orders above 15kg.</p>
+    <div class="pricing-table">
+      <div class="pricing-row header">
+        <div>Service</div>
+        <div style="text-align:center;">Unit</div>
+        <div style="text-align:center;">Details</div>
+        <div style="text-align:right;">Price</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Wash &amp; Fold</div>
+          <div class="pricing-detail">Washed, dried and neatly folded</div>
+        </div>
+        <div class="pricing-val">Per kg</div>
+        <div class="pricing-val">Min. 2 kg</div>
+        <div class="pricing-cost">Ksh 80/kg</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Wash, Iron &amp; Fold</div>
+          <div class="pricing-detail">Full finish — washed, pressed and folded</div>
+        </div>
+        <div class="pricing-val">Per kg</div>
+        <div class="pricing-val">Min. 2 kg</div>
+        <div class="pricing-cost">Ksh 100/kg</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Carpet Cleaning</div>
+          <div class="pricing-detail">Deep clean, stain &amp; odour removal</div>
+        </div>
+        <div class="pricing-val">Per sq. m</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 200/m²</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Duvet — 3×6</div>
+          <div class="pricing-detail">Single size duvet</div>
+        </div>
+        <div class="pricing-val">Per piece</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 350</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Duvet — 4×6</div>
+          <div class="pricing-detail">Double size duvet</div>
+        </div>
+        <div class="pricing-val">Per piece</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 450</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Duvet — 5×6</div>
+          <div class="pricing-detail">Queen size duvet</div>
+        </div>
+        <div class="pricing-val">Per piece</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 500</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Duvet — 6×6 &amp; above</div>
+          <div class="pricing-detail">King size duvet</div>
+        </div>
+        <div class="pricing-val">Per piece</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 550</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Men's Suit</div>
+          <div class="pricing-detail">Dry clean + professional press, returned on hanger</div>
+        </div>
+        <div class="pricing-val">Per suit</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 700</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Ladies' Suit / Blazer Set</div>
+          <div class="pricing-detail">Dry clean + press, blazer + trousers or skirt</div>
+        </div>
+        <div class="pricing-val">Per set</div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-cost">Ksh 600</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Curtain / Drape</div>
+          <div class="pricing-detail">Per panel, any fabric</div>
+        </div>
+        <div class="pricing-val">Per panel</div>
+        <div class="pricing-val">Min. 2 panels</div>
+        <div class="pricing-cost">Ksh 150</div>
+      </div>
+      <div class="pricing-row">
+        <div>
+          <div class="pricing-service">Pickup &amp; Delivery</div>
+          <div class="pricing-detail">Within Kisumu CBD &amp; environs</div>
+        </div>
+        <div class="pricing-val">—</div>
+        <div class="pricing-val">Under 15kg</div>
+        <div class="pricing-cost">Ksh 100</div>
+      </div>
+    </div>
+    <div class="pricing-note">
+      <strong>Free pickup &amp; delivery</strong> on all orders above 15kg. Working hours: <strong>8am – 5pm.</strong> Call us on <strong>0795 430 666</strong> or <strong>0111 866 922</strong> for bulk or business rates.
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-label">Schedule a pickup</div>
+    <h2 class="section-title">Book your laundry service</h2>
+    <p class="section-sub">Fill in the form, choose how you'd like to pay, and we'll take it from there.</p>
+    <div class="booking-layout">
+      <div class="booking-info">
+        <h3>What happens next?</h3>
+        <p>Once you submit your booking, our team will confirm via WhatsApp within 30 minutes during working hours. We'll come to you, collect your items, and return them clean on your preferred date.</p>
+        <ul class="booking-perks">
+          <li>Confirmation via WhatsApp within 30 mins</li>
+          <li>Free pickup &amp; delivery on orders over 15kg</li>
+          <li>Same-day service available on request</li>
+          <li>Careful handling of all fabric types</li>
+          <li>M-Pesa (Pochi la Biashara) or cash on delivery</li>
+          <li>Working hours: 8am – 5pm</li>
+        </ul>
+      </div>
+      <div class="booking-form">
+        <div class="form-title">Your booking details</div>
+        <div id="booking-form-inner">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full name</label>
+              <input type="text" id="b-name" placeholder="e.g. Amina Odhiambo">
+            </div>
+            <div class="form-group">
+              <label>Phone number</label>
+              <input type="tel" id="b-phone" placeholder="07XX XXX XXX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service type</label>
+            <select id="b-service">
+              <option value="">Select a service...</option>
+              <option>Wash &amp; Fold (Ksh 80/kg)</option>
+              <option>Wash, Iron &amp; Fold (Ksh 100/kg)</option>
+              <option>Carpet Cleaning (Ksh 200/m²)</option>
+              <option>Duvet — 3×6 (Ksh 350)</option>
+              <option>Duvet — 4×6 (Ksh 450)</option>
+              <option>Duvet — 5×6 (Ksh 500)</option>
+              <option>Duvet — 6×6 &amp; above (Ksh 550)</option>
+              <option>Men's Suit (Ksh 700 — dry clean + press)</option>
+              <option>Ladies' Suit / Blazer Set (Ksh 600 — dry clean + press)</option>
+              <option>Curtains / Drapes (Ksh 150/panel)</option>
+              <option>Multiple services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Pickup location (Kisumu)</label>
+            <input type="text" id="b-location" placeholder="e.g. Milimani, Nyalenda, Kondele...">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred date</label>
+              <input type="date" id="b-date">
+            </div>
+            <div class="form-group">
+              <label>Preferred time</label>
+              <select id="b-time">
+                <option value="">Select time...</option>
+                <option>8:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 2:00 PM</option>
+                <option>2:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 5:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Additional notes (optional)</label>
+            <textarea id="b-notes" placeholder="e.g. special instructions, number of kg, carpet size..."></textarea>
+          </div>
+
+          <!-- PAYMENT -->
+          <div class="payment-section">
+            <div class="payment-title">Payment method</div>
+            <div class="payment-methods">
+              <div class="pay-method active" onclick="selectPay('mpesa', this)">
+                <div style="font-size:1.5rem;">📱</div>
+                <div class="pay-method-name">M-Pesa</div>
+                <div class="pay-method-sub">Pochi la Biashara</div>
+              </div>
+              <div class="pay-method" onclick="selectPay('card', this)">
+                <div style="font-size:1.5rem;">💳</div>
+                <div class="pay-method-name">Card</div>
+                <div class="pay-method-sub">Visa / Mastercard</div>
+              </div>
+              <div class="pay-method" onclick="selectPay('cash', this)">
+                <div style="font-size:1.5rem;">💵</div>
+                <div class="pay-method-name">Cash</div>
+                <div class="pay-method-sub">Pay on delivery</div>
+              </div>
+            </div>
+
+            <div id="pay-mpesa" class="mpesa-input">
+              <div style="margin-top:1rem; background:#e3f2fd; border:1px solid #bbdefb; border-radius:4px; padding:1rem 1.1rem;">
+                <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1565c0;margin-bottom:0.6rem;">How to pay via M-Pesa</div>
+                <ol style="padding-left:1.1rem;font-size:0.88rem;color:#1a3a5c;line-height:2;">
+                  <li>Open M-Pesa on your phone</li>
+                  <li>Select <strong>Send Money</strong> or <strong>Pochi la Biashara</strong></li>
+                  <li>Enter number: <strong style="color:#0a2a4a;font-size:1rem;">0795 430 666</strong></li>
+                  <li>Enter the amount for your service</li>
+                  <li>Use your name as the reference</li>
+                  <li>Complete the transaction &amp; copy the <strong>M-Pesa code</strong></li>
+                </ol>
+                <div style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid #bbdefb;font-size:0.8rem;color:#5c7a9a;">
+                  Payment goes to <strong style="color:#0a2a4a;">Top Tier Laundry Co.</strong> · Pochi la Biashara
+                </div>
+              </div>
+              <div class="form-group" style="margin-top:0.85rem;margin-bottom:0;">
+                <label>M-Pesa transaction code</label>
+                <input type="text" id="mpesa-code" placeholder="e.g. SBX12345YZ — from your confirmation SMS" style="text-transform:uppercase;">
+              </div>
+            </div>
+
+            <div id="pay-card" style="display:none;" class="card-inputs">
+              <div style="margin-top:0.85rem;margin-bottom:0.75rem;padding:0.8rem 1rem;background:#fff8e1;border:1px solid #ffe082;border-radius:4px;font-size:0.82rem;color:#5c7a9a;line-height:1.5;">
+                Card payments will be activated soon. For now please use M-Pesa or cash on delivery.
+              </div>
+            </div>
+          </div>
+
+          <button class="submit-btn" onclick="submitBooking()">Confirm booking</button>
+        </div>
+        <div class="form-success" id="booking-success">
+          <div style="font-size:2.5rem;margin-bottom:0.5rem;">✅</div>
+          <h3>Booking confirmed!</h3>
+          <p>Thank you! We'll reach out on <strong id="confirm-phone"></strong> via WhatsApp within 30 minutes to confirm your pickup details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Customer reviews</div>
+    <h2 class="section-title">What our clients say</h2>
+    <p class="section-sub">Real feedback from real customers in Kisumu.</p>
+    <div class="reviews-grid" id="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"My carpet had a stain I thought was permanent. They returned it looking brand new. Absolutely worth every shilling."</div>
+        <div class="review-author">Brenda A.</div>
+        <div class="review-date">Milimani, Kisumu</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Very professional. They picked up on time, WhatsApp'd me updates, and delivered neatly folded. Will definitely use again."</div>
+        <div class="review-author">Kevin O.</div>
+        <div class="review-date">Nyalenda, Kisumu</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-text">"Good service and fair price. The bedding came back smelling so fresh. Pickup could be a bit earlier but overall very happy."</div>
+        <div class="review-author">Fatuma M.</div>
+        <div class="review-date">Kondele, Kisumu</div>
+      </div>
+    </div>
+
+    <div class="review-form-wrap">
+      <h3>Leave a review</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your name</label>
+          <input type="text" id="r-name" placeholder="e.g. Jane Achieng">
+        </div>
+        <div class="form-group">
+          <label>Your neighbourhood</label>
+          <input type="text" id="r-area" placeholder="e.g. Milimani, Kisumu">
+        </div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;">Rating</div>
+        <div class="stars-select" id="star-select">
+          <button class="star-btn" onclick="setStars(1)">★</button>
+          <button class="star-btn" onclick="setStars(2)">★</button>
+          <button class="star-btn" onclick="setStars(3)">★</button>
+          <button class="star-btn" onclick="setStars(4)">★</button>
+          <button class="star-btn" onclick="setStars(5)">★</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your review</label>
+        <textarea id="r-text" placeholder="Tell us about your experience with Top Tier..." style="min-height:100px;"></textarea>
+      </div>
+      <button class="review-submit" onclick="submitReview()">Submit review</button>
+      <div id="review-thanks" style="display:none;margin-top:1rem;padding:0.75rem 1rem;background:#e8f5e9;border-radius:4px;color:#2e7d32;font-size:0.9rem;">
+        Thank you for your review! It means a lot to us.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">Get in touch</div>
+    <h2 class="section-title">We're here for you</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-label">Phone / WhatsApp</div>
+        <div class="contact-value">
+          <a href="tel:0795430666">0795 430 666</a><br>
+          <a href="tel:0111866922">0111 866 922</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Working hours</div>
+        <div class="contact-value" style="color:rgba(255,255,255,0.8);">
+          8:00 AM – 5:00 PM
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value" style="color:rgba(255,255,255,0.8);">
+          Kisumu, Kenya<br>Pickup & delivery within Kisumu
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Free pickup on</div>
+        <div class="contact-value" style="color:rgba(255,255,255,0.8);">
+          All orders above 15kg<br><span style="color:var(--gold);">Ksh 100 delivery under 15kg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Top Tier</div>
+  <p>© 2026 Top Tier Laundry Co. · Kisumu, Kenya · Transforming Fabrics, Clinging to Godliness</p>
+  <p style="margin-top:0.75rem;"><a href="#" onclick="openOwnerPanel()" style="color:rgba(255,255,255,0.2);font-size:0.7rem;text-decoration:none;letter-spacing:0.1em;">Owner access</a></p>
+</footer>
+
+<!-- ACTIVE OFFER BANNER (hidden by default) -->
+<div id="offer-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--gold);padding:0.75rem 1.5rem;text-align:center;font-size:0.9rem;font-weight:600;color:var(--blue-deep);">
+  <span id="offer-banner-text"></span>
+  <button onclick="document.getElementById('offer-banner').style.display='none'" style="background:none;border:none;font-size:1.1rem;cursor:pointer;margin-left:1rem;color:var(--blue-deep);">✕</button>
+</div>
+
+<!-- OWNER PANEL OVERLAY -->
+<div id="owner-overlay" style="display:none;min-height:600px;background:rgba(0,0,0,0.7);padding:2rem 1rem;">
+  <div style="max-width:700px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;">
+    <div style="background:var(--blue-deep);padding:1.25rem 1.75rem;display:flex;align-items:center;justify-content:space-between;">
+      <div style="font-family:'Great Vibes',cursive;font-size:1.5rem;color:#fff;">Top Tier — Owner Dashboard</div>
+      <button onclick="closeOwnerPanel()" style="background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.3rem;cursor:pointer;">✕</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="owner-login" style="padding:2rem;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#0a2a4a;margin-bottom:1.25rem;">Enter owner password</div>
+      <input type="password" id="owner-pw" placeholder="Password" style="width:100%;padding:0.75rem 1rem;border:1px solid #bbdefb;border-radius:2px;font-size:0.9rem;margin-bottom:1rem;font-family:'Jost',sans-serif;">
+      <button onclick="ownerLogin()" style="background:#1565c0;color:#fff;border:none;padding:0.75rem 2rem;border-radius:2px;font-family:'Jost',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Login</button>
+      <div id="login-error" style="display:none;color:#c62828;font-size:0.85rem;margin-top:0.75rem;">Incorrect password.</div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="owner-dashboard" style="display:none;padding:1.75rem;">
+
+      <!-- OFFERS MANAGER -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#5c7a9a;margin-bottom:1rem;">Active offer / discount</div>
+        <div style="display:grid;grid-template-columns:1fr auto;gap:0.75rem;align-items:end;">
+          <div>
+            <label style="font-size:0.75rem;font-weight:600;color:#5c7a9a;display:block;margin-bottom:0.3rem;letter-spacing:0.06em;text-transform:uppercase;">Offer message</label>
+            <input type="text" id="offer-text" placeholder="e.g. This week only: 20% off all duvets! Call 0795 430 666 to book." style="width:100%;padding:0.7rem 0.9rem;border:1px solid #bbdefb;border-radius:2px;font-family:'Jost',sans-serif;font-size:0.9rem;">
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button onclick="activateOffer()" style="background:#1565c0;color:#fff;border:none;padding:0.7rem 1.25rem;border-radius:2px;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;">Show offer</button>
+            <button onclick="clearOffer()" style="background:#f5f5f5;color:#555;border:1px solid #ddd;padding:0.7rem 1rem;border-radius:2px;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;white-space:nowrap;">Clear</button>
+          </div>
+        </div>
+        <div id="offer-status" style="font-size:0.8rem;color:#2e7d32;margin-top:0.5rem;display:none;">Offer banner is now live on the site.</div>
+      </div>
+
+      <!-- BOOKINGS -->
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+          <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#5c7a9a;">Client bookings</div>
+          <button onclick="clearBookings()" style="background:none;border:1px solid #f0c0c0;color:#c62828;padding:0.3rem 0.8rem;border-radius:2px;font-size:0.75rem;cursor:pointer;">Clear all</button>
+        </div>
+        <div id="bookings-list" style="max-height:360px;overflow-y:auto;border:1px solid #e3f2fd;border-radius:4px;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const OWNER_PASS = 'toptier2026';
+  let selectedPay = 'mpesa';
+  let selectedStars = 0;
+  let bookings = JSON.parse(localStorage.getItem('tt_bookings') || '[]');
+
+  function selectPay(method, el) {
+    selectedPay = method;
+    document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('pay-mpesa').style.display = method === 'mpesa' ? 'block' : 'none';
+    document.getElementById('pay-card').style.display = method === 'card' ? 'block' : 'none';
+  }
+
+  function formatCard(input) {
+    let v = input.value.replace(/\D/g, '').substring(0, 16);
+    input.value = v.replace(/(.{4})/g, '$1 ').trim();
+  }
+
+  function submitBooking() {
+    const name = document.getElementById('b-name').value.trim();
+    const phone = document.getElementById('b-phone').value.trim();
+    const service = document.getElementById('b-service').value;
+    const location = document.getElementById('b-location').value.trim();
+    const date = document.getElementById('b-date').value;
+    const time = document.getElementById('b-time').value;
+    const notes = document.getElementById('b-notes').value.trim();
+    const mpesaCode = selectedPay === 'mpesa' ? (document.getElementById('mpesa-code').value.trim().toUpperCase()) : '';
+
+    if (!name || !phone || !service || !location || !date || !time) {
+      alert('Please fill in all required fields before confirming your booking.');
+      return;
+    }
+    if (selectedPay === 'mpesa' && !mpesaCode) {
+      alert('Please enter your M-Pesa transaction code before confirming.');
+      return;
+    }
+
+    const booking = {
+      id: Date.now(), name, phone, service, location, date, time, notes,
+      payment: selectedPay,
+      mpesaCode: mpesaCode || '—',
+      submitted: new Date().toLocaleString('en-KE', {timeZone:'Africa/Nairobi'})
+    };
+    bookings.unshift(booking);
+    localStorage.setItem('tt_bookings', JSON.stringify(bookings));
+
+    emailjs.send('service_xio4upq', 'template_yw17vjh', {
+      to_email: 'astarprismimbaz@gmail.com',
+      client_name: name,
+      client_phone: phone,
+      service: service,
+      location: location,
+      date: date,
+      time: time,
+      payment: selectedPay,
+      mpesa_code: mpesaCode || '—',
+      notes: notes || 'None',
+      submitted: booking.submitted
+    }).catch(() => {});
+
+    document.getElementById('booking-form-inner').style.display = 'none';
+    document.getElementById('confirm-phone').textContent = phone;
+    document.getElementById('booking-success').style.display = 'block';
+  }
+
+  function setStars(n) {
+    selectedStars = n;
+    document.querySelectorAll('.star-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', i < n);
+    });
+  }
+
+  function submitReview() {
+    const name = document.getElementById('r-name').value.trim();
+    const area = document.getElementById('r-area').value.trim();
+    const text = document.getElementById('r-text').value.trim();
+    if (!name || !text || selectedStars === 0) {
+      alert('Please enter your name, a rating, and your review.');
+      return;
+    }
+    const stars = '★'.repeat(selectedStars) + '☆'.repeat(5 - selectedStars);
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    card.innerHTML = `
+      <div class="review-stars">${stars}</div>
+      <div class="review-text">"${text}"</div>
+      <div class="review-author">${name}</div>
+      <div class="review-date">${area || 'Kisumu'}</div>
+    `;
+    card.style.opacity = '0'; card.style.transform = 'translateY(12px)'; card.style.transition = 'all 0.4s ease';
+    document.getElementById('reviews-grid').appendChild(card);
+    requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+    document.getElementById('r-name').value = '';
+    document.getElementById('r-area').value = '';
+    document.getElementById('r-text').value = '';
+    setStars(0);
+    document.getElementById('review-thanks').style.display = 'block';
+    setTimeout(() => { document.getElementById('review-thanks').style.display = 'none'; }, 4000);
+  }
+
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('b-date').min = today;
+
+  function openOwnerPanel() {
+    document.getElementById('owner-overlay').style.display = 'block';
+    document.getElementById('owner-login').style.display = 'block';
+    document.getElementById('owner-dashboard').style.display = 'none';
+    document.getElementById('owner-pw').value = '';
+    document.getElementById('login-error').style.display = 'none';
+    window.scrollTo(0, document.getElementById('owner-overlay').offsetTop - 80);
+  }
+
+  function closeOwnerPanel() {
+    document.getElementById('owner-overlay').style.display = 'none';
+  }
+
+  function ownerLogin() {
+    const pw = document.getElementById('owner-pw').value;
+    if (pw === OWNER_PASS) {
+      document.getElementById('owner-login').style.display = 'none';
+      document.getElementById('owner-dashboard').style.display = 'block';
+      renderBookings();
+      const saved = localStorage.getItem('tt_offer');
+      if (saved) document.getElementById('offer-text').value = saved;
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+
+  function renderBookings() {
+    bookings = JSON.parse(localStorage.getItem('tt_bookings') || '[]');
+    const el = document.getElementById('bookings-list');
+    if (!bookings.length) {
+      el.innerHTML = '<div style="padding:1.5rem;text-align:center;color:#5c7a9a;font-size:0.9rem;">No bookings yet.</div>';
+      return;
+    }
+    el.innerHTML = bookings.map((b, i) => `
+      <div style="padding:1rem 1.25rem;border-bottom:1px solid #e3f2fd;${i===0?'background:#f8fbff':''}">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+          <div>
+            <div style="font-size:0.95rem;font-weight:600;color:#0a2a4a;">${b.name}</div>
+            <div style="font-size:0.8rem;color:#1565c0;">${b.phone} &nbsp;·&nbsp; ${b.payment.toUpperCase()}</div>
+          </div>
+          <div style="font-size:0.75rem;color:#5c7a9a;text-align:right;">${b.submitted}</div>
+        </div>
+        <div style="margin-top:0.5rem;font-size:0.85rem;color:#1a3a5c;"><strong>Service:</strong> ${b.service}</div>
+        <div style="font-size:0.85rem;color:#1a3a5c;"><strong>Location:</strong> ${b.location}</div>
+        <div style="font-size:0.85rem;color:#1a3a5c;"><strong>Date/Time:</strong> ${b.date} &nbsp; ${b.time}</div>
+        ${b.mpesaCode && b.mpesaCode !== '—' ? `<div style="font-size:0.85rem;color:#1a3a5c;"><strong>M-Pesa Code:</strong> <span style="color:#0a7c3e;font-weight:600;letter-spacing:0.05em;">${b.mpesaCode}</span></div>` : ''}
+        ${b.notes ? `<div style="font-size:0.82rem;color:#5c7a9a;margin-top:0.25rem;font-style:italic;">Notes: ${b.notes}</div>` : ''}
+      </div>
+    `).join('');
+  }
+
+  function activateOffer() {
+    const text = document.getElementById('offer-text').value.trim();
+    if (!text) { alert('Please enter an offer message first.'); return; }
+    localStorage.setItem('tt_offer', text);
+    document.getElementById('offer-banner-text').textContent = text;
+    document.getElementById('offer-banner').style.display = 'block';
+    document.getElementById('offer-status').style.display = 'block';
+  }
+
+  function clearOffer() {
+    localStorage.removeItem('tt_offer');
+    document.getElementById('offer-text').value = '';
+    document.getElementById('offer-banner').style.display = 'none';
+    document.getElementById('offer-status').style.display = 'none';
+  }
+
+  function clearBookings() {
+    if (!confirm('Delete all booking records?')) return;
+    localStorage.removeItem('tt_bookings');
+    bookings = [];
+    renderBookings();
+  }
+
+  // Restore offer banner on page load
+  const savedOffer = localStorage.getItem('tt_offer');
+  if (savedOffer) {
+    document.getElementById('offer-banner-text').textContent = savedOffer;
+    document.getElementById('offer-banner').style.display = 'block';
+  }
+
+  document.getElementById('owner-pw').addEventListener('keydown', e => { if(e.key==='Enter') ownerLogin(); });
+</script>
+</body>
+</html>
